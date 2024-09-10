@@ -1,6 +1,6 @@
 module app;
 
-import config : Config, Gender, HeadDirection, OutputFormat, MadogearType, NoJobId, ignoreBaby;
+import config : Config, Gender, HeadDirection, OutputFormat, MadogearType, NoJobId;
 import draw : Canvas, canvasFromString;
 import logging : LogLevel, LogDg;
 import luad.state : LuaState;
