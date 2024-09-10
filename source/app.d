@@ -1,6 +1,6 @@
 module app;
 
-import config : Config, Gender, HeadDirection, OutputFormat, MadogearType, NoJobId;
+import config : Config, Gender, HeadDirection, OutputFormat, MadogearType, NoJobId, ignoreBaby;
 import draw : Canvas, canvasFromString;
 import logging : LogLevel, LogDg;
 import luad.state : LuaState;
@@ -249,7 +249,7 @@ string[] process(immutable Config config, LogDg log, LuaState L,
             RawImage[] images = drawPlayer(sprites, config.action,
                     (requestFrame < 0) ? uint.max : requestFrame, &sortIndexDelegate, canvas);
 
-            if (isBaby(jobid))
+            if (isBaby(jobid) && !config.ignoreBaby)
             {
                 import renderer : applyBabyScaling;
 

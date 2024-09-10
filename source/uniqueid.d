@@ -47,6 +47,7 @@ private ubyte[] configToByteArray(uint jobid, immutable(Config) config, immutabl
     buffer[(sz * i) .. (sz * (++i))] = nativeToLittleEndian(config.headdir.toInt());
     buffer[(sz * i) .. (sz * (++i))] = nativeToLittleEndian(config.madogearType.toInt());
     buffer[(sz * i) .. (sz * (++i))] = nativeToLittleEndian(config.enableShadow ? 1 : 0);
+    buffer[(sz * i) .. (sz * (++i))] = nativeToLittleEndian(config.ignoreBaby ? 1 : 0);
     buffer[(sz * i) .. (sz * (++i))] = nativeToLittleEndian(config.outputFormat.toInt());
     buffer[(sz * i) .. (sz * (++i))] = nativeToLittleEndian(canvas.width);
     buffer[(sz * i) .. (sz * (++i))] = nativeToLittleEndian(canvas.height);

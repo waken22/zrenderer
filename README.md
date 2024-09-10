@@ -43,6 +43,7 @@ A tool to render sprites from Ragnarok Online
                  --headdir Direction in which the head should turn. This is only applied to player sprites and only to the stand and sit action. Possible values are: straight, left, right or all. If 'all' is set then this direction system is ignored and all frames are interpreted like any other one. Default: all
             --madogearType The alternative madogear sprite for player characters. Only applicable to madogear jobs. Possible values are 'robot' (0) and 'suit' (2). Default: robot
             --enableShadow Draw shadow underneath the sprite. Default: true
+            --ignoreBaby Ignore if a class job id is a baby. Default: false
             --singleframes Generate single frames of an animation. Default: false
    --enableUniqueFilenames If enabled the output filenames will be the checksum of input parameters. This will ensure that each request creates a filename that is unique to the input parameters and no overlapping for the same job occurs. Default: false
      --returnExistingFiles Whether to return already existing sprites (true) or always re-render it (false). You should only use this option in conjuction with 'enableUniqueFilenames=true'. Default: false

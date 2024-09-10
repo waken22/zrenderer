@@ -163,6 +163,9 @@ struct Config
     @Desc("Draw shadow underneath the sprite.")
     bool enableShadow = true;
 
+    @Desc("Ignore if a class job id is a baby.")
+    bool ignoreBaby = false;
+
     @Desc("Generate single frames of an animation.")
     bool singleframes = false;
 
